@@ -1,0 +1,56 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root {
+  /* Primary Colors */
+  --color-primary: #059669; /* Primary - emerald-600 */
+  --color-primary-light: #10b981; /* Primary Light - emerald-500 */
+  --color-primary-dark: #047857; /* Primary Dark - emerald-700 */
+  
+  /* Neutral Colors */
+  --color-background: #FFFFFF; /* Background - white */
+  --color-surface: #F9FAFB; /* Surface - gray-50 */
+  --color-border: #E5E7EB; /* Border - gray-200 */
+  --color-subtle: #9CA3AF; /* Subtle - gray-400 */
+  --color-text-muted: #6B7280; /* Text Muted - gray-500 */
+  --color-text-primary: #374151; /* Text Primary - gray-700 */
+  --color-text-dark: #111827; /* Text Dark - gray-900 */
+  
+  /* Semantic Colors */
+  --color-success: #16A34A; /* Success - green-600 */
+  --color-warning: #F59E0B; /* Warning - amber-500 */
+  --color-error: #DC2626; /* Error - red-600 */
+  --color-info: #2563EB; /* Info - blue-600 */
+  --color-sale: #E11D48; /* Sale - rose-600 */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-dark transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-150;
+  }
+}
